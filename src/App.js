@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Tweet from './Static-tweet/Tweet'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const testTweet = {
+  messege : "something about cats",
+  gravitor : "xyz",
+  author : {
+    handle : "catperson",
+    name : "cat Person name"
+  },
+  likes : 2,
+  retweet : 0,
+  timestamp : "3 hours ago"
 }
-
-export default App;
+const App = () => {
+  return(
+    <div>
+      <Tweet  tweetData = {testTweet}/>
+      
+    </div>
+  )
+}
+export default App
